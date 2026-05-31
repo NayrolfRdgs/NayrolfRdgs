@@ -60,12 +60,14 @@ Je suis un étudiant passionné par l'informatique, le développement, le self-h
 </p>
 
 </td>
-    <!-- Colonne de Droite : Ton Widget Spotify Compact Transparent -->
+    <!-- Colonne de Droite : Ton Widget Spotify Compact Glow & Semi-transparent -->
     <td valign="middle" align="center" width="40%">
       <p><b>🎵 En ce moment sur Spotify</b></p>
       <br />
       <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&redirect=true" target="_blank">
-        <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&cover_image=true&theme=compact&show_offline=true&background_color=00000000&interchange=false&profanity=false&hide_remaster=false" alt="Spotify GitHub Profile" />
+        <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&cover_image=true&theme=compact&show_offline=true&background_color=00000000&interchange=false&profanity=false&hide_remaster=false" 
+             style="opacity: 0.85; filter: drop-shadow(0px 0px 12px rgba(30, 215, 96, 0.4));" 
+             alt="Spotify GitHub Profile" />
       </a>
     </td>
   </tr>
