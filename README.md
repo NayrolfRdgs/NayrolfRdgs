@@ -1,6 +1,6 @@
 # Salut, moi c'est Florian ! 👋
 
-Je suis passionné par l'informatique, le développement, le self-hosting et les infrastructures réseau. J'aime construire, optimiser et garder le contrôle sur mes données, mes outils et mes environnements de jeu.
+Je suis un étudiant passionné par l'informatique, le développement, le self-hosting et les infrastructures réseau. J'aime construire, optimiser et garder le contrôle sur mes données, mes outils et mes environnements de jeu.
 
 ---
 
@@ -60,12 +60,12 @@ Je suis passionné par l'informatique, le développement, le self-hosting et les
 </p>
 
 </td>
-    <!-- Colonne de Droite : Ton Widget Spotify -->
+    <!-- Colonne de Droite : Ton Widget Spotify Compact Transparent -->
     <td valign="middle" align="center" width="40%">
       <p><b>🎵 En ce moment sur Spotify</b></p>
       <br />
       <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&redirect=true" target="_blank">
-        <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&cover_image=true&theme=novatorem&show_offline=true&background_color=000000&interchange=true&profanity=false&hide_remaster=true&bar_color=000000&bar_color_cover=true" alt="Spotify GitHub Profile" />
+        <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&cover_image=true&theme=compact&show_offline=true&background_color=00000000&interchange=false&profanity=false&hide_remaster=false" alt="Spotify GitHub Profile" />
       </a>
     </td>
   </tr>
