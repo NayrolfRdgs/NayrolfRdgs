@@ -1,6 +1,6 @@
 # Salut, moi c'est Florian ! 👋
 
-Passionné par l'informatique, le développement, les infrastructures réseau et toute les nouveles technologie. J'aime construire, optimiser et garder le contrôle sur mes données, mes outils et mes environnements de jeu.
+Je suis un étudiant passionné par l'informatique, le développement, le self-hosting et les infrastructures réseau. J'aime construire, optimiser et garder le contrôle sur mes données, mes outils et mes environnements de jeu.
 
 ---
 
@@ -52,6 +52,16 @@ Passionné par l'informatique, le développement, les infrastructures réseau et
   <a href="https://unity.com/" target="_blank"><img src="https://img.shields.io/badge/Unity-000000?style=flat-square&logo=unity&logoColor=white" alt="Unity" /></a>
   <a href="https://www.unrealengine.com/" target="_blank"><img src="https://img.shields.io/badge/Unreal_Engine-0E1128?style=flat-square&logo=unrealengine&logoColor=white" alt="Unreal Engine" /></a>
   <a href="https://www.minecraft.net/" target="_blank"><img src="https://img.shields.io/badge/Minecraft_Modding-🧱-ED8B26?style=flat-square" alt="Minecraft Modding" /></a>
+</p>
+
+---
+
+### 🎵 En ce moment sur Spotify
+
+<p align="left">
+  <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&redirect=true" target="_blank">
+    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&cover_image=true&theme=novatorem&show_offline=true&background_color=000000&interchange=true&profanity=false&hide_remaster=true&bar_color=000000&bar_color_cover=true" alt="Spotify GitHub Profile" />
+  </a>
 </p>
 
 ---
