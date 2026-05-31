@@ -40,7 +40,7 @@ Salut moi c'est flo passionné par l'informatique, le développement, les infras
   <a href="https://github.com/music-assistant" target="_blank"><img src="https://img.shields.io/badge/Music_Assistant-🎵-41BDF5?style=flat-square" alt="Music Assistant" /></a>
   <a href="https://rustdesk.com/" target="_blank"><img src="https://img.shields.io/badge/RustDesk-EF4444?style=flat-square&logo=rustdesk&logoColor=white" alt="RustDesk" /></a>
   <a href="https://www.orange.fr/" target="_blank"><img src="https://img.shields.io/badge/Livebox_Orange-FF6600?style=flat-square&logo=orange&logoColor=white" alt="LiveBox" /></a>
-  <a href="https://fr.wikipedia.org/wiki/Moteur_1.6_l_HDi" target="_blank"><img src="https://img.shields.io/badge/PSA_1.6_HDI-Increvable-blue?style=flat-square" alt="1.6 HDI" /></a>
+  <a href="https://fr.wikipedia.org/wiki/Peugeot_207" target="_blank"><img src="https://img.shields.io/badge/PSA_1.6_HDI-Increvable-blue?style=flat-square" alt="1.6 HDI" /></a>
 </p>
 
 #### 💻 Dev, BDD & Outils de Code
