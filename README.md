@@ -1,6 +1,6 @@
 # Salut, moi c'est Florian ! 👋
 
-Je suis un étudiant passionné par l'informatique, le développement, le self-hosting et les infrastructures réseau. J'aime construire, optimiser et garder le contrôle sur mes données, mes outils et mes environnements de jeu.
+Je suis passionné par l'informatique, le développement, le self-hosting et les infrastructures réseau. J'aime construire, optimiser et garder le contrôle sur mes données, mes outils et mes environnements de jeu.
 
 ---
 
@@ -14,6 +14,11 @@ Je suis un étudiant passionné par l'informatique, le développement, le self-h
 ---
 
 ### 🛠️ Technologies & Outils
+
+<table border="0">
+  <tr>
+    <!-- Colonne de Gauche : Tes Technologies -->
+    <td valign="top" width="60%">
 
 #### 🗂️ Systèmes d'exploitation
 <p align="left">
@@ -54,15 +59,17 @@ Je suis un étudiant passionné par l'informatique, le développement, le self-h
   <a href="https://www.minecraft.net/" target="_blank"><img src="https://img.shields.io/badge/Minecraft_Modding-🧱-ED8B26?style=flat-square" alt="Minecraft Modding" /></a>
 </p>
 
----
-
-### 🎵 En ce moment sur Spotify
-
-<p align="left">
-  <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&redirect=true" target="_blank">
-    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&cover_image=true&theme=novatorem&show_offline=true&background_color=000000&interchange=true&profanity=false&hide_remaster=true&bar_color=000000&bar_color_cover=true" alt="Spotify GitHub Profile" />
-  </a>
-</p>
+</td>
+    <!-- Colonne de Droite : Ton Widget Spotify -->
+    <td valign="middle" align="center" width="40%">
+      <p><b>🎵 En ce moment sur Spotify</b></p>
+      <br />
+      <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&redirect=true" target="_blank">
+        <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&cover_image=true&theme=novatorem&show_offline=true&background_color=000000&interchange=true&profanity=false&hide_remaster=true&bar_color=000000&bar_color_cover=true" alt="Spotify GitHub Profile" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 ---
 
