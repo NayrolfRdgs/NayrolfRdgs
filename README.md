@@ -1,4 +1,4 @@
-# Salut, moi c'est Florian ! 👋
+**# Salut, moi c'est Florian ! 👋
 Passionné de tech, de hardware DIY et d'IA locales. Je build des serveurs, je pilote des drones FPV, je ride en électrique et je bidouille des LLMs en local.
 ### 🤖 IA Locales & Outils
 <p align="left">
@@ -125,3 +125,4 @@ Passionné de tech, de hardware DIY et d'IA locales. Je build des serveurs, je p
 ---
 
 *“Local processing, local privacy.”* 🔒
+**
