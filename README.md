@@ -101,6 +101,22 @@ Salut, moi c'est Flo ! Passionné par l'informatique, le développement et les i
       <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&redirect=true" target="_blank">
         <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&cover_image=true&theme=compact&show_offline=true&background_color=121212&interchange=false&profanity=false&hide_remaster=false" alt="Spotify GitHub Profile" />
       </a>
+
+      <br /><br />
+
+      <p><b>🔥 Top artistes du mois (Last.fm)</b></p>
+      <br />
+      <a href="https://last.fm/user/FloRdgs" target="_blank">
+        <img src="https://last-fm-top-artists.vercel.app/api?username=FloRdgs&period=1month&count=5" alt="Top Artists This Month" />
+      </a>
+
+      <br /><br />
+
+      <p><b>🕒 Écoutes récentes (Last.fm)</b></p>
+      <br />
+      <a href="https://last.fm/user/FloRdgs" target="_blank">
+        <img src="https://lastfm-recently-played.vercel.app/api?user=FloRdgs&count=5" alt="Last.fm Recently Played" />
+      </a>
     </td>
   </tr>
 </table>
