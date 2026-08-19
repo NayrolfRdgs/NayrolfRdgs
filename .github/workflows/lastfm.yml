@@ -21,7 +21,7 @@ steps:
     env:
       LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
     run: |
-      python - <<'PY'
+      python3 <<'PY'
       import json
       import os
       import urllib.parse
@@ -44,6 +44,11 @@ steps:
       with urllib.request.urlopen(url) as response:
           data = json.load(response)
 
+      if "error" in data:
+          raise RuntimeError(
+              f"Last.fm error {data['error']}: {data['message']}"
+          )
+
       artists = data["topartists"]["artist"]
 
       html = """
@@ -54,9 +59,11 @@ steps:
 
       for artist in artists:
           name = artist["name"]
-          url = artist["url"]
+          artist_url = artist["url"]
+          playcount = artist.get("playcount", "0")
 
           image = ""
+
           for img in artist.get("image", []):
               if img.get("size") == "extralarge":
                   image = img.get("#text", "")
@@ -68,12 +75,15 @@ steps:
                       image = img.get("#text", "")
                       break
 
-          playcount = artist.get("playcount", "0")
-
           html += f"""
             <td align="center">
-              <a href="{url}">
-                <img src="{image}" width="110" height="110" style="border-radius: 50%;" alt="{name}">
+              <a href="{artist_url}">
+                <img
+                  src="{image}"
+                  width="110"
+                  height="110"
+                  alt="{name}"
+                >
               </a>
               <br>
               <b>{name}</b>
@@ -88,37 +98,41 @@ steps:
       </div>
       """
 
-      with open("lastfm_artists.html", "w", encoding="utf-8") as f:
-          f.write(html)
+      with open("lastfm_artists.html", "w", encoding="utf-8") as file:
+          file.write(html)
       PY
 
   - name: Update README
     run: |
-      python - <<'PY'
+      python3 <<'PY'
       from pathlib import Path
 
       readme = Path("README.md")
-      html = Path("lastfm_artists.html").read_text(encoding="utf-8")
+      artists_file = Path("lastfm_artists.html")
 
       content = readme.read_text(encoding="utf-8")
+      artists = artists_file.read_text(encoding="utf-8")
 
       start = "<!-- LASTFM_TOP_ARTISTS_START -->"
       end = "<!-- LASTFM_TOP_ARTISTS_END -->"
 
-      before = content.split(start)[0]
-      after = content.split(end)[1]
+      if start not in content or end not in content:
+          raise RuntimeError(
+              "Les marqueurs Last.fm sont absents du README.md"
+          )
 
-      new_content = (
-          before
-          + start
+      start_position = content.index(start) + len(start)
+      end_position = content.index(end)
+
+      content = (
+          content[:start_position]
           + "\n"
-          + html
+          + artists
           + "\n"
-          + end
-          + after
+          + content[end_position:]
       )
 
-      readme.write_text(new_content, encoding="utf-8")
+      readme.write_text(content, encoding="utf-8")
       PY
 
   - name: Commit README changes
@@ -129,7 +143,7 @@ steps:
       git add README.md
 
       if git diff --cached --quiet; then
-        echo "No changes."
+        echo "No changes to commit."
       else
         git commit -m "🎵 Update Last.fm top artists"
         git push
