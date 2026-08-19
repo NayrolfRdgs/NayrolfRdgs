@@ -1,0 +1,137 @@
+name: Update Last.fm Top Artists
+
+on:
+schedule:
+- cron: "0 6 * * *"
+workflow_dispatch:
+
+permissions:
+contents: write
+
+jobs:
+update-lastfm:
+runs-on: ubuntu-latest
+
+```
+steps:
+  - name: Checkout repository
+    uses: actions/checkout@v4
+
+  - name: Get Last.fm Top Artists
+    env:
+      LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+    run: |
+      python - <<'PY'
+      import json
+      import os
+      import urllib.parse
+      import urllib.request
+
+      username = "FloRdgs"
+      api_key = os.environ["LASTFM_API_KEY"]
+
+      params = urllib.parse.urlencode({
+          "method": "user.gettopartists",
+          "user": username,
+          "api_key": api_key,
+          "period": "1month",
+          "limit": "5",
+          "format": "json"
+      })
+
+      url = "https://ws.audioscrobbler.com/2.0/?" + params
+
+      with urllib.request.urlopen(url) as response:
+          data = json.load(response)
+
+      artists = data["topartists"]["artist"]
+
+      html = """
+      <div align="center">
+        <table>
+          <tr>
+      """
+
+      for artist in artists:
+          name = artist["name"]
+          url = artist["url"]
+
+          image = ""
+          for img in artist.get("image", []):
+              if img.get("size") == "extralarge":
+                  image = img.get("#text", "")
+                  break
+
+          if not image:
+              for img in artist.get("image", []):
+                  if img.get("size") == "large":
+                      image = img.get("#text", "")
+                      break
+
+          playcount = artist.get("playcount", "0")
+
+          html += f"""
+            <td align="center">
+              <a href="{url}">
+                <img src="{image}" width="110" height="110" style="border-radius: 50%;" alt="{name}">
+              </a>
+              <br>
+              <b>{name}</b>
+              <br>
+              <sub>{playcount} écoutes</sub>
+            </td>
+          """
+
+      html += """
+          </tr>
+        </table>
+      </div>
+      """
+
+      with open("lastfm_artists.html", "w", encoding="utf-8") as f:
+          f.write(html)
+      PY
+
+  - name: Update README
+    run: |
+      python - <<'PY'
+      from pathlib import Path
+
+      readme = Path("README.md")
+      html = Path("lastfm_artists.html").read_text(encoding="utf-8")
+
+      content = readme.read_text(encoding="utf-8")
+
+      start = "<!-- LASTFM_TOP_ARTISTS_START -->"
+      end = "<!-- LASTFM_TOP_ARTISTS_END -->"
+
+      before = content.split(start)[0]
+      after = content.split(end)[1]
+
+      new_content = (
+          before
+          + start
+          + "\n"
+          + html
+          + "\n"
+          + end
+          + after
+      )
+
+      readme.write_text(new_content, encoding="utf-8")
+      PY
+
+  - name: Commit README changes
+    run: |
+      git config user.name "github-actions[bot]"
+      git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      git add README.md
+
+      if git diff --cached --quiet; then
+        echo "No changes."
+      else
+        git commit -m "🎵 Update Last.fm top artists"
+        git push
+      fi
+```
