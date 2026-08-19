@@ -103,22 +103,19 @@ Salut, moi c'est Flo ! Passionné par l'informatique, le développement et les i
 </td>
 
 <td valign="middle" align="center" width="40%">
-
 <p><b>🎵 En ce moment sur Spotify</b></p>
 
 <br />
 
-<a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&redirect=true" target="_blank">
-  <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&cover_image=true&theme=compact&show_offline=true&background_color=121212&interchange=false&profanity=false&hide_remaster=false" alt="Spotify GitHub Profile" />
-</a>
+<a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&redirect=true" target="_blank"> <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31jdycjhxyyxrrb5zdvrm7bhqhxe&cover_image=true&theme=compact&show_offline=true&background_color=121212&interchange=false&profanity=false&hide_remaster=false" alt="Spotify GitHub Profile" /> </a>
 
 <br /><br />
 
 <p><b>🎤 Mes artistes les plus écoutés ce mois-ci</b></p>
 
-<!--START_LASTFM_ARTISTS-->
+<!-- LASTFM_TOP_ARTISTS_START -->
 
-<!--END_LASTFM_ARTISTS-->
+<!-- LASTFM_TOP_ARTISTS_END -->
 
 </td>
 </tr>
